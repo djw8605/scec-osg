@@ -6,12 +6,12 @@ error = condor_out/err.$(CLUSTER).$(PROCESS)
 
 log = log
 should_transfer_files = YES
-when_to_transfer_output = ON_EXIT
+when_to_transfer_output = ON_EXIT_OR_EVICT
 x509userproxy = /tmp/x509up_u1384
-#Requirements = GLIDEIN_ResourceName == "Nebraska" || GLIDEIN_ResourceName == "Firefly"
-Rank = GLIDEIN_ResourceName == "Nebraska" || GLIDEIN_ResourceName == "Firefly"
+Requirements = GLIDEIN_ResourceName == "Nebraska" || GLIDEIN_ResourceName == "Firefly" || GLIDEIN_ResourceName == "prairiefire"
+#Rank = GLIDEIN_ResourceName == "Nebraska" || GLIDEIN_ResourceName == "Firefly"
 transfer_input_files = scec.sh, install_cfg.py
-
+PeriodicHold = false
 queue  3
 
 
