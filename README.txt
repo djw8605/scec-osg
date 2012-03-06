@@ -1,9 +1,12 @@
 SCEC and OSG integration README
 ===============================
 
+Mostly following the guide:
+http://scec.usc.edu/scecpedia/Broadband_User_Guide_Current
 
-Files:
 
+Files
+-----
 install_cfg.py:
     Customized version of install_cfg.py that is distributed with scec 
     broadband platform.
